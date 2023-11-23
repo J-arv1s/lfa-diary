@@ -17,8 +17,13 @@ api.get("/", (req, res) => {
         name: "LaFosse Diaries",
         description: "Minds on Paper",
         endpoints: [
-            'GET /entries',
-            'GET /entries/:id'
+            'GET /entries', // done jarv
+            'GET /entries/:id', // in progress gajani
+            'GET /entries/:date_created',
+            'GET /entries/:category',
+            'POST /entries', // done jarv
+            'PATCH /entries/:id',
+            'DELETE /entries/:id' // inprog jarv
         ]
     })
 })

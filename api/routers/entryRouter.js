@@ -5,5 +5,6 @@ const entryRouter = Router()
 
 entryRouter.get('/', entryController.index)
 entryRouter.post('/', entryController.create)
+// entryRouter.delete('/', entryController.delete)
 
 module.exports = entryRouter

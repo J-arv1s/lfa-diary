@@ -19,7 +19,19 @@ async function create(req, res){
     }
 }
 
+// async function destroy(req, res){
+//     try {
+//         const entry_id = parseInt(req.params.id)
+//         const entry = await Entry.getOneById(entry_id)
+//         await entry.destroy()
+//         res.status(204).end()
+//     } catch (error) {
+//         res.status(404).json({ "error": error.message})
+//     }
+// }
+
 module.exports = {
     index,
-    create
+    create,
+    // destroy
 }
