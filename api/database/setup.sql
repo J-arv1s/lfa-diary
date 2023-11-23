@@ -1,4 +1,4 @@
-CREATE TABLE entry (
+CREATE TABLE entries (
     entry_id INT GENERATED ALWAYS AS IDENTITY,
     category VARCHAR (100) NOT NULL,
     content VARCHAR (1000) NOT NULL,
