@@ -17,9 +17,3 @@ Once the server is running, you can access the app using live server 8080
 - You may add diary entries with a desired category, which will be displayed on the screen, with the date of when you created them.
 
 - You can delete posts of your choosing.
-
-
-
-
-
-
