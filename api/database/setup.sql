@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS entries;
+
+
 CREATE TABLE entries (
     entry_id INT GENERATED ALWAYS AS IDENTITY,
     category VARCHAR (100) NOT NULL,
