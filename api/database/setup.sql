@@ -13,9 +13,9 @@ CREATE TABLE entries (
 INSERT into entries 
 (category, content, date_created, time_created)
 VALUES
-('personal', 'This is my first personal diary entry', 'Thu Nov 23 2023', 5625212),
-('work', 'Need to email Chris', 'Wed Nov 22 2023', 546584),
-('personal', 'Amanda reccomended watching Game of Thrones. I will give it a go!', 'Fri Nov 24 2023', 65),
-('work', 'Complete spreadhsheet', 'Fri Nov 24 2023', 56464),
-('personal', 'Need to do groceries', 'Fri Nov 24 2023', 10);
+('Personal', 'This is my first personal diary entry', 'Thu Nov 23 2023', 5625212),
+('Work', 'Need to email Chris', 'Wed Nov 22 2023', 546584),
+('Personal', 'Amanda reccomended watching Game of Thrones. I will give it a go!', 'Fri Nov 24 2023', 65),
+('Work', 'Complete spreadhsheet', 'Fri Nov 24 2023', 56464),
+('Personal', 'Need to do groceries', 'Fri Nov 24 2023', 10);
 

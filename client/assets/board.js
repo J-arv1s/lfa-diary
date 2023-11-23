@@ -3,13 +3,40 @@ function createPostElement (data) {
     post.className = "post";
 
     const header = document.createElement("h2");
-    header.textContent = data["category"];
+    header.textContent = `Category: ${data.category}`;
     post.appendChild(header);
 
     const content = document.createElement("p");
-    content.textContent = data["content"];
+    content.textContent = `${data.content}`;
     post.appendChild(content);
+    
+    const info = document.createElement("p")
+    info.textContent = `ID: ${data.entry_id} || Created: ${data.date_created}`
+    post.appendChild(info)
 
+    const deleteBtn = document.createElement('button')
+    deleteBtn.textContent = "Delete post"
+    deleteBtn.className = "button"
+    deleteBtn.style = "background-color: #ADD8E6"
+    
+    deleteBtn.addEventListener('click', async (e) => {
+        e.preventDefault()
+        // console.log('DELETING POST')
+        const options = {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        let id = data.entry_id
+        const response = await fetch('http://localhost:3000/entries/' + id, options)
+        if(!response.ok){
+            console.log('Could not Delete!!!!')
+        } else {
+            window.location.reload()
+        }
+    })
+    post.appendChild(deleteBtn)
     return post;
 }
 
@@ -46,8 +73,10 @@ postForm.addEventListener('submit', async (e) => {
         })
     }
 
-    const res = await fetch('http://localhost:3000/entries', options)
-    if (res.status(201)){
+    const response = await fetch('http://localhost:3000/entries', options)
+    if(!response.ok){
+        console.log('Could not Create!!!!')
+    } else {
         window.location.reload()
     }
 })
