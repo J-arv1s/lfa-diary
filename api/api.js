@@ -19,7 +19,6 @@ api.get("/", (req, res) => {
         endpoints: [
             'GET /entries', // done
             'GET /entries/:id', // done
-            'GET /entries/:date_created',
             'GET /entries/category/:category', // done
             'POST /entries', // done
             'PATCH /entries/:id', // done
